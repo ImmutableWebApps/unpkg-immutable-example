@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ng-immutable-example'`, () => {
+  it(`should have as title 'unpkg-immutable-example'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ng-immutable-example');
+    expect(app.title).toEqual('unpkg-immutable-example');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ng-immutable-example!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to unpkg-immutable-example!');
   });
 });

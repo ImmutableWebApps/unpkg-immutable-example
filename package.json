@@ -1,6 +1,6 @@
 {
-  "name": "ng-immutable-example",
-  "version": "0.0.0",
+  "name": "@immutablewebapps/unpkg-immutable-example",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
@@ -44,5 +44,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1"
-  }
+  },
+  "files": [
+    "dist/unpkg-immutable-example"
+  ]
 }
