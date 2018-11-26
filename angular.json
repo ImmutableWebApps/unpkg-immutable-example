@@ -15,7 +15,7 @@
           "options": {
             "deployUrl": "<%=deployUrl%>",
             "baseHref": "<%=baseHref%>",
-            "outputPath": "dist/unpkg-immutable-example",
+            "outputPath": "dist",
             "index": "src/index.ejs",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -38,7 +38,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
