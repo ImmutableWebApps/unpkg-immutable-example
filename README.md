@@ -14,15 +14,15 @@
 <p>Using a combination of npm, UNPKG, and Github Pages covers nearly all of these requirements!</p>
 <ul>
 <li><b><a href="https://www.npmjs.com/">npm</a>:</b> The software registry stores the the static assets in
-    versioned, immutable packages.</li>
+    versioned, immutable packages. <i>Perfect for managing the immutable assets!</i></li>
 <br />
 <li><b><a href="https://unpkg.com/#/">UNPKG</a>:</b> The CDN makes all assets of the packages on npm addressable
     over https
-    and globally available.</li>
+    and globally available. <i>Perfect for delivering the immutable assets!</i></li>
 <br />
 <li><b><a href="https://pages.github.com/">GitHub Pages</a>:</b> This static hosting site supports easy
     configuration of DNS and HTTPS, has great integration with GitHub (obviously), and has a short TTL for
-    browser caching</li>
+    browser caching. <i>Perfect for serving the deployment manifest!</i></li>
 </ul>
 <h2><i>This Immutable Web App is hosted using npm, UNPKG, and GitHub Pages!</i></h2>
 <h3>Project Structure</h3>
@@ -35,18 +35,18 @@ is split into two critical branches:
     <br />
     <li><a href="https://github.com/ImmutableWebApps/unpkg-immutable-example/tree/master"><code>master</code></a> is
     configured to serve the GitHub Pages site. It only contains a single file <a href="https://github.com/ImmutableWebApps/unpkg-immutable-example/blob/master/404.html"><code>404.html</code></a>.
-    This single file is served for every request made to the GitHub Pages site.</li>
+    This single file is <a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/">served for every request</a> made to the GitHub Pages site.</li>
 </ul>
 <h3>Project Lifecycle</h3>
 <h4>Building</h4>
-<p>Developing this web application is the same as any other Angular project. Features are built and tested locally, commits and
+<p>Developing this web application is the same as any other single-page app node project. Features are built and tested locally, commits and
     pull requests advance the state of the codebase. When a stable version of the app is ready to be deployed, the
     assets are rendered to the <code>/dist</code> folder using <code>npm run build</code> and new version of the
-    project is published to npm using <code>npm publish</code>. The assets become available on <a href="https://unpkg.com/@immutablewebapps/unpkg-immutable-example@0.0.1/">UNPKG</a>.</p>
+    project is published to npm using <code>npm publish</code>. The assets become available on <a href="https://unpkg.com/@immutablewebapps/unpkg-immutable-example/">UNPKG</a>.</p>
 <h4>Deploying</h4>
 <p>With the new version of the assets available on UNPKG, an <i>atomic</i> deployment can be triggered by
-    switching to the <code>master</code> branch and updating <code>404.html</code> with the new references to project
-    assets via UNPKG and any related changes to environment variables. Once the commit is made, GitHub Pages
+    switching to the <code>master</code> branch and updating <code>404.html</code> with the references to the new project
+    assets and any changes to environment variables. Once the commit is is pushed to the GitHub repository, GitHub Pages
     deployment is triggered and the new version of the web application is available.</p>
 <h2><i>Deployments!</i></h2>
 <p>With our Immutable Web App hosted by npm/UNPKG and without any environment-specific configuration, deployments
@@ -70,4 +70,14 @@ is split into two critical branches:
     <li>Create a folder for the <code>index.html</code></li>
     <li>Run <code>netlify deploy</code></li>
     <li><a href="https://immutablewebapps.netlify.com"><b><i>Deployed!</i></b></a></li>
+</ul>
+<h3>Deploy Locally</h3>
+<p><i>and configure it however you want! Try loading up some <a href="https://github.com/ImmutableWebApps/unpkg-immutable-example/releases">older versions!</a></i></p>
+<ul>
+    <li><code>git clone
+    https://github.com/ImmutableWebApps/unpkg-immutable-deployment.git</code></li>
+    <li><code>cd unpkg-immutable-deployment</code></li>
+    <li><code>npm i -g ecstatic</code></li>
+    <li><code>ecstatic</code> (<a href="https://www.npmjs.com/package/ecstatic">ecstatic</a> is a simple static file server)</li>
+    <li><a href="http://0.0.0.0:8000"><b><i>Deployed!</i></b></a></li>
 </ul>
