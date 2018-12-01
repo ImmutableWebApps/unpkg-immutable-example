@@ -71,7 +71,7 @@
     <li><a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">Configure
             the
             repo as a publishing source for Github Pages</a></li>
-    <li>Modify the <code>404.html</code> to point to a different version</a></li>
+    <li>Modify the <code>404.html</code> to point to a different version</li>
     <li><a href="https://immutablewebapps.org/unpkg-immutable-deployment"><b><i>Deployed!</i></b></a></li>
 </ul>
 <h3>Deploy to Netlify</h3>
